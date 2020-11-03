@@ -7,7 +7,6 @@
   "scripts": {
     "build": "gulp build",
     "test": "gulp test",
-    "postinstall": "typings install && gulp build",
     "gulp": "gulp",
     "typings": "typings"
   },
