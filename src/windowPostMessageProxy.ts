@@ -203,6 +203,10 @@ export class WindowPostMessageProxy {
    * Response messages re-use tracking properties from a previous request message.
    */
   private sendResponse(targetWindow: Window, message: any, trackingProperties: ITrackingProperties): void {
+    if (!targetWindow) {
+      console.warn('window is not set - aborting');
+      return;
+    }
     this.addTrackingProperties(message, trackingProperties);
 
     if (this.logMessages) {
